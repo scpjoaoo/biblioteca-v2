@@ -114,9 +114,9 @@ namespace biblioteca_v2
                     updateCommand.Parameters.AddWithValue("@id", ID);
                     updateCommand.Parameters.AddWithValue("@nome", tbEdClienteAluguel.Text);
                     updateCommand.Parameters.AddWithValue("@livro", tbEdLivroAluguel.Text);
-                    updateCommand.Parameters.AddWithValue("@dataaluguel", tbEdStatus.Text);
-                    updateCommand.Parameters.AddWithValue("@dataentrega", Convert.ToDateTime(tbEdDataAluguel.Text));
-                    updateCommand.Parameters.AddWithValue("@status", Convert.ToDateTime(tbEdDataEntrega.Text));
+                    updateCommand.Parameters.AddWithValue("@status", tbEdStatus.Text);
+                    updateCommand.Parameters.AddWithValue("@dataaluguel", Convert.ToDateTime(tbEdDataAluguel.Text));
+                    updateCommand.Parameters.AddWithValue("@dataentrega", Convert.ToDateTime(tbEdDataEntrega.Text));
 
                     int rowsAffected = updateCommand.ExecuteNonQuery();
 
